@@ -1,0 +1,50 @@
+﻿@model WebApplication1.Models.Gig
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Gig</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Deliverytime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Deliverytime)
+        </dd>
+        @Model.GigID - @ViewBag.GigID
+    </dl>
+</div>
+<p>
+@Html.ActionLink("Place an order","PlaceAnOrder","Gigs", new { id = ViewBag.GigID, gig = ViewBag.GigID })
+@Html.ActionLink("Back to List", "Index")
+</p>
